@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duygucuk</title>
+    <link rel="shortcut icon" href="./css/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/loader.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body id="body">
+    <div class="loader" id="loader">
+      <div class="loading-wave">
+        <div class="loading">
+            <svg width="64px" height="48px">
+                <polyline points="0.157 23.954, 14 23.954, 21.843 48, 43 0, 50 24, 64 24" id="back"></polyline>
+              <polyline points="0.157 23.954, 14 23.954, 21.843 48, 43 0, 50 24, 64 24" id="front"></polyline>
+            </svg>
+          </div>
+    </div>
+      </div>
+
+      <div id="page">
+
+        <div class="home_content">
+            <div class="home_container">
+        
+                <div class="home_container__left">
+        
+                    <div class="hm_l__title_c">
+                        <h2 class="hm_l__title">
+                            Merhaba <span class="colorred">Duygucuk</span>, <span id="typed_animation"></span>
+                        </h2>
+                    </div>
+        
+                    <div class="hm_l__desc_c">
+                        <p class="hm_l__desc">
+                        İyiki varsınn <span class="colorred"><strong>küçük kız</strong></span> 💕
+                        </p>
+                    </div>
+                    <div class="hm_l__buttons_c">
+                        <button class="hm_l__buttons__button" type="button" onclick="playMusic()">
+                            <a>Rica etsem 1 kere bana tıklaymışın</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <audio controls id="background-music" style="display: none;">
+                <source src="./css/mavigriDünyanınEnGüzelKizi.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+              </audio>
+        </div>
+
+
+      <div class="gradient-bg">
+        <div class="gradients-container">
+            <div class="g1"></div>
+            <div class="g2"></div>
+            <div class="g3"></div>
+            <div class="g4"></div>
+            <div class="g5"></div>
+            <div class="interactive"></div>
+        </div>
+      </div>
+
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+    window.addEventListener("load", function () {
+    setTimeout(function () {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("page").style.display = "block";
+      var loader = document.getElementById("loader");
+      var page = document.getElementById("page");
+      loader.style.display = "none";
+      page.style.display = "block";
+    }, 1000);
+  });
+  </script>
+  <script>
+var typed = new Typed('#typed_animation', {
+  strings: [
+    'Özür Dilerim ve Seni Seviyorum.', // Türkçe
+    'I\'m Sorry and I Love You.', // İngilizce
+    'Je suis désolé et je t\'aime.', // Fransızca
+    'Es tut mir leid und ich liebe dich.', // Almanca
+    'Lo siento y te amo.', // İspanyolca
+    'Mi dispiace e ti amo.', // İtalyanca
+    'Desculpa e eu te amo.', // Portekizce
+    'Извини и я тебя люблю.', // Rusça
+    'أعتذر وأحبك', // Arapça
+    '对不起，我爱你', // Çince (Mandarin)
+    'ごめんなさい、そして愛しています', // Japonca
+    '미안하고 사랑해', // Korece
+    'Jag är ledsen och jag älskar dig.', // İsveççe
+    'Jeg er lei meg og jeg elsker deg.' // Norveççe
+  ],
+  typeSpeed: 50,
+  backSpeed: 25,
+  loop: true
+    });
+  </script>
+<script>
+    let musicPlayed = false;
+    function playMusic() {
+        var audio = document.getElementById('background-music');
+        if (musicPlayed) {
+            audio.pause();
+            musicPlayed = false;
+        } else {
+            audio.play();
+            musicPlayed = true;
+        }
+    }
+</script>
+</html>
